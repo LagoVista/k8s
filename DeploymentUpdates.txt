@@ -1,4 +1,4 @@
-kubectl set image deployment.v1.apps/logwriter-deployment logwriter=nuviot/logwriter:v1.6.586.1702 --record
+kubectl set image deployment.v1.apps/logwriter-deployment logwriter=nuviot/logwriter:v1.6.586.1703 --record
 
 kubectl set image deployment.v1.apps/settings-service-deployment settings-service=nuviot/settings-service:v1.6.586.1314 --record
 
