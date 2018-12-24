@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: instance-settings
+  labels: 
+    settingtype: instance
+data:
+  Environment: {{environment}}
+  InstanceId: {{instanceid}}
+  VersionId: {{instance_version_id}}
+  OrgId: {{instance_org_id}}
+  SystemUsers__OrgId: {{sys_user_orgid}}
+  SystemUsers__OrgName: "System Users"
+  SystemUsers__HostId: {{sys_user_hostid}}
+  SystemUsers__HostName: "System Host Manager"
+  SystemUsers__InstanceUserId: {{sys_user_instance_id}}
+  SystemUsers__InstanceUserName: "System Instance Manager"
+  Redis__Server: {{sys_redis_server}}
+  Redis__Port: {{sys_redis_port}}
