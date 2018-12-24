@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: settings-service
-        image: nuviot/settings-service:v1.6.585.1514
+        image: nuviot/settings-service:v1.6.586.1705
         env:
           - name: AccessKey
             valueFrom: 
