@@ -4,4 +4,4 @@ kubectl set image deployment.v1.apps/settings-service-deployment settings-servic
 
 kubectl set image deployment.v1.apps/devicerepo-deployment settings-service=nuviot/devicerepo:v1.6.586.1656 --record
 
-kubectl set image deployment.v1.apps/notif-publisher-deployment settings-service=nuviot/notif-publisher:v1.6.586.1706 --record
+kubectl set image deployment.v1.apps/notif-publisher-deployment settings-service=nuviot/notif-publisher:v1.6.586.1707 --record
