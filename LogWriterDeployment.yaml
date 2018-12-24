@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: 2018-12-19T10:03:00Z
   name: logwriter-deployment
   namespace: default
   labels: 
