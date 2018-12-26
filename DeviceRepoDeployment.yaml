@@ -19,7 +19,7 @@ spec:
         app: nuviot
         teir: serviceproviders
         service: devicerepo
-   annotations:
+      annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path:   /metrics
         prometheus.io/port:   '80'                  
