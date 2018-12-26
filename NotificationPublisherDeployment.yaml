@@ -19,10 +19,14 @@ spec:
         app: nuviot
         teir: serviceproviders
         service: notif-publisher
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path:   /metrics
+        prometheus.io/port:   '80'          
     spec:
       containers:
       - name: notif-publisher
-        image: nuviot/notif-publisher:v1.6.586.1707
+        image: nuviot/notif-publisher:v1.6.588.1057
         env:
           - name: AccessKey
             valueFrom: 
