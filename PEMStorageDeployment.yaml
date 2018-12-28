@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pemstorage-deployment
+  namespace: default
+  labels: 
+     app: nuviot
+     teir: serviceproviders
+spec:
+  replicas: 1     
+  selector:
+    matchLabels:
+      app: nuviot
+      teir: serviceproviders
+  template:
+    metadata:
+      labels:
+        app: nuviot
+        teir: serviceproviders
+        service: pemstorage
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path:   /metrics
+        prometheus.io/port:   '80'        
+    
+    spec:
+      containers:
+      - name: pemstorage
+        image: nuviot/pemstorage:v1.6.588.1035
+        env:
+          - name: AccessKey
+            valueFrom: 
+              secretKeyRef:
+                name: instance-secrets
+                key: AccessKey
+        envFrom:
+          - configMapRef:
+              name: instance-settings
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker-repo-secret       
