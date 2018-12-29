@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: notif-publisher
-        image: nuviot/notif-publisher:v1.6.591.1039
+        image: nuviot/notif-publisher:v1.6.591.1056
         env:
           - name: AccessKey
             valueFrom: 
