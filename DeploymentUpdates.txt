@@ -4,7 +4,7 @@ kubectl set image deployment.v1.apps/devicedatastorage-deployment logwriter=nuvi
 
 kubectl set image deployment.v1.apps/pemstorage-deployment logwriter=nuviot/pemstorage:v1.6.591.1042 --record
 
-kubectl set image deployment.v1.apps/usagewriter-deployment logwriter=nuviot/usagewriter:v1.6.587.1640 --record
+kubectl set image deployment.v1.apps/usagewriter-deployment logwriter=nuviot/usagewriter:v1.6.591.1044 --record
 
 kubectl set image deployment.v1.apps/settings-service-deployment settings-service=nuviot/settings-service:v1.6.591.1043 --record
 
