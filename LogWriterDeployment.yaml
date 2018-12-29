@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: logwriter
-        image: nuviot/logwriter:v1.6.591.1040
+        image: nuviot/logwriter:v1.6.591.1056
         env:
           - name: AccessKey
             valueFrom: 
