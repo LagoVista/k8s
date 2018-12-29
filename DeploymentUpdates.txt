@@ -8,6 +8,6 @@ kubectl set image deployment.v1.apps/usagewriter-deployment logwriter=nuviot/usa
 
 kubectl set image deployment.v1.apps/settings-service-deployment settings-service=nuviot/settings-service:v1.6.588.1247 --record
 
-kubectl set image deployment.v1.apps/devicerepo-deployment settings-service=nuviot/devicerepo:v1.6.588.1319 --record
+kubectl set image deployment.v1.apps/devicerepo-deployment settings-service=nuviot/devicerepo:v1.6.591.1036 --record
 
 kubectl set image deployment.v1.apps/notif-publisher-deployment settings-service=nuviot/notif-publisher:v1.6.588.1057 --record
