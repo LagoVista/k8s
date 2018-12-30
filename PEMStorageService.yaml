@@ -5,7 +5,7 @@ metadata:
   namespace: default
   labels: 
      app: nuviot
-     teir: serviceproviders
+     tier: serviceproviders
 spec:
   ports: 
     - port: 80      

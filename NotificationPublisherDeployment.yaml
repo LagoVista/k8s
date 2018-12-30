@@ -6,18 +6,18 @@ metadata:
   namespace: default
   labels: 
      app: nuviot
-     teir: serviceproviders
+     tier: serviceproviders
 spec:
   replicas: 1     
   selector:
     matchLabels:
       app: nuviot
-      teir: serviceproviders
+      tier: serviceproviders
   template:
     metadata:
       labels:
         app: nuviot
-        teir: serviceproviders
+        tier: serviceproviders
         service: notif-publisher
       annotations:
         prometheus.io/scrape: 'true'

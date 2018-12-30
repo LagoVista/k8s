@@ -5,18 +5,18 @@ metadata:
   namespace: default
   labels: 
      app: nuviot
-     teir: pem-modules
+     tier: pem-modules
 spec:
   replicas: 1     
   selector:
     matchLabels:
       app: nuviot
-      teir: pem-modules
+      tier: pem-modules
   template:
     metadata:
       labels:
         app: nuviot
-        teir: pem-modules
+        tier: pem-modules
         module: pem-listeners
       annotations:
         prometheus.io/scrape: 'true'
