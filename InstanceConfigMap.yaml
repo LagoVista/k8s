@@ -17,3 +17,5 @@ data:
   SystemUsers__InstanceUserName: "System Instance Manager"
   Redis__Server: {{sys_redis_server}}
   Redis__Port: {{sys_redis_port}}
+  PEMQueue_Uri {{pem_queue_uri}}
+  PEMQueue_UserName {{pem_queue_user_name}]
