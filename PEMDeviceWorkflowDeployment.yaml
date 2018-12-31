@@ -25,7 +25,7 @@ spec:
     
     spec:
       containers:
-      - name: pem-listener
+      - name: pem-device-workflow
         image: nuviot/pem-device-workflow:v1.6.593.1758
         env:
           - name: AccessKey
