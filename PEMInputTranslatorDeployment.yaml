@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pem-inputtranslator-deployment
+  name: pem-input-translator-deployment
   namespace: default
   labels: 
      app: nuviot
@@ -17,7 +17,7 @@ spec:
       labels:
         app: nuviot
         tier: pem-modules
-        module: pem-inputtranslator
+        module: pem-input-translator
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path:   /metrics
@@ -25,8 +25,8 @@ spec:
     
     spec:
       containers:
-      - name: pem-inputtranslator
-        image: nuviot/pem-inputtranslator:v1.6.592.1528
+      - name: pem-input-translator
+        image: nuviot/pem-input-translator:v1.6.592.1528
         env:
           - name: AccessKey
             valueFrom: 
@@ -36,7 +36,5 @@ spec:
         envFrom:
           - configMapRef:
               name: instance-settings
-        ports:
-        - containerPort: 80
       imagePullSecrets:
       - name: docker-repo-secret       
