@@ -16,7 +16,7 @@ spec:
     metadata:
       labels:
         app: nuviot
-        tierr: serviceproviders
+        tier: serviceproviders
         service: logwriter
       annotations:
         prometheus.io/scrape: 'true'
