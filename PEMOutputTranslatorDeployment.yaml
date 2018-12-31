@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pem-outputtranslator-deployment
+  name: pem-output-translator-deployment
   namespace: default
   labels: 
      app: nuviot
@@ -17,7 +17,7 @@ spec:
       labels:
         app: nuviot
         tier: pem-modules
-        module: pem-outputtranslator
+        module: pem-output-translator
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path:   /metrics
@@ -25,8 +25,8 @@ spec:
     
     spec:
       containers:
-      - name: pem-outputtranslator
-        image: nuviot/pem-outputtranslator:v1.6.592.1528
+      - name: pem-output-translator
+        image: nuviot/pem-output-translator:v1.6.592.1528
         env:
           - name: AccessKey
             valueFrom: 
@@ -35,8 +35,6 @@ spec:
                 key: AccessKey
         envFrom:
           - configMapRef:
-              name: instance-settings
-        ports:
-        - containerPort: 80
+              name: instance-settings        
       imagePullSecrets:
       - name: docker-repo-secret       
