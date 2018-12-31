@@ -11,5 +11,5 @@ spec:
     - port: 80      
   selector:
      app: nuviot
-     teir: serviceproviders
+     tier: serviceproviders
      service: pemstorage
