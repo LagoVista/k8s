@@ -16,6 +16,6 @@ kubectl set image deployment.v1.apps/pem-listener-deployment pem-listener=nuviot
 
 kubectl set image deployment.v1.apps/pem-planner-deployment pem-planner=nuviot/pem-planner:v1.6.593.1547 --record
 
-kubectl set image deployment.v1.apps/pem-sentinel-deployment pem-sentinel=nuviot/pem-sentinel:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-sentinel-deployment pem-sentinel=nuviot/pem-sentinel:v1.6.593.1753 --record
 
 kubectl set image deployment.v1.apps/pem-input-listener-deployment pem-input-listener=nuviot/pem-input-listener:v1.6.593.1547 --record
