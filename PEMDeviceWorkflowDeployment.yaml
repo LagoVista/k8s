@@ -35,8 +35,6 @@ spec:
                 key: AccessKey
         envFrom:
           - configMapRef:
-              name: instance-settings
-        ports:
-        - containerPort: 80
+              name: instance-settings      
       imagePullSecrets:
       - name: docker-repo-secret       
