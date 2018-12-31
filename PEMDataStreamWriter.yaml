@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pem-data-stream-writer-deployment
+  namespace: default
+  labels: 
+     app: nuviot
+     tier: pem-modules
+spec:
+  replicas: 1     
+  selector:
+    matchLabels:
+      app: nuviot
+      tier: pem-modules
+  template:
+    metadata:
+      labels:
+        app: nuviot
+        tier: pem-modules
+        module: pem-data-stream-writer
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path:   /metrics
+        prometheus.io/port:   '80'        
+    
+    spec:
+      containers:
+      - name: pem-data-stream-writer
+        image: nuviot/pem-data-stream-writer:v1.6.593.1753
+        env:
+          - name: AccessKey
+            valueFrom: 
+              secretKeyRef:
+                name: instance-secrets
+                key: AccessKey
+        envFrom:
+          - configMapRef:
+              name: instance-settings
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker-repo-secret       
