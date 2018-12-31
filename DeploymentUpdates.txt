@@ -12,4 +12,4 @@ kubectl set image deployment.v1.apps/devicerepo-deployment devicerepo=nuviot/dev
 
 kubectl set image deployment.v1.apps/notif-publisher-deployment notif-publisher=nuviot/notif-publisher:v1.6.591.1110 --record
 
-kubectl set image deployment.v1.apps/pem-listener notif-publisher=nuviot/pem-listener:v1.6.593.1054 --record
+kubectl set image deployment.v1.apps/pem-listener-deployment pem-listener=nuviot/pem-listener:v1.6.593.1054 --record
