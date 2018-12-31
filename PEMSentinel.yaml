@@ -1,0 +1,125 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pem-sentinel-deployment
+  namespace: default
+  labels: 
+     app: nuviot
+     tier: pem-modules
+spec:
+  replicas: 1     
+  selector:
+    matchLabels:
+      app: nuviot
+      tier: pem-modules
+  template:
+    metadata:
+      labels:
+        app: nuviot
+        tier: pem-modules
+        module: pem-apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pem-listener-deployment
+  namespace: default
+  labels: 
+     app: nuviot
+     tier: pem-modules
+spec:
+  replicas: 1     
+  selector:
+    matchLabels:
+      app: nuviot
+      tier: pem-modules
+  template:
+    metadata:
+      labels:
+        app: nuviot
+        tier: pem-modules
+        module: pem-listeners
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path:   /metrics
+        prometheus.io/port:   '80'        
+    
+    spec:
+      containers:
+      - name: pem-apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pem-listener-deployment
+  namespace: default
+  labels: 
+     app: nuviot
+     tier: pem-modules
+spec:
+  replicas: 1     
+  selector:
+    matchLabels:
+      app: nuviot
+      tier: pem-modules
+  template:
+    metadata:
+      labels:
+        app: nuviot
+        tier: pem-modules
+        module: pem-listeners
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path:   /metrics
+        prometheus.io/port:   '80'        
+    
+    spec:
+      containers:
+      - name: pem-sentinel
+        image: nuviot/pem-sentinel:v1.6.592.1528
+        env:
+          - name: AccessKey
+            valueFrom: 
+              secretKeyRef:
+                name: instance-secrets
+                key: AccessKey
+        envFrom:
+          - configMapRef:
+              name: instance-settings
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker-repo-secret       
+
+        image: nuviot/pem-listener:v1.6.592.1528
+        env:
+          - name: AccessKey
+            valueFrom: 
+              secretKeyRef:
+                name: instance-secrets
+                key: AccessKey
+        envFrom:
+          - configMapRef:
+              name: instance-settings
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker-repo-secret       
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path:   /metrics
+        prometheus.io/port:   '80'        
+    
+    spec:
+      containers:
+      - name: pem-listener
+        image: nuviot/pem-listener:v1.6.592.1528
+        env:
+          - name: AccessKey
+            valueFrom: 
+              secretKeyRef:
+                name: instance-secrets
+                key: AccessKey
+        envFrom:
+          - configMapRef:
+              name: instance-settings
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker-repo-secret       
