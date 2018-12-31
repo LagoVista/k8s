@@ -17,7 +17,7 @@ spec:
       labels:
         app: nuviot
         tier: pem-modules
-        module: pem-listeners
+        module: pem-listener
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path:   /metrics
