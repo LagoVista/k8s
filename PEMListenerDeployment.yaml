@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: pem-listener
-        image: nuviot/pem-listener:v1.6.593.1205
+        image: nuviot/pem-listener:v1.6.593.1213
         env:
           - name: AccessKey
             valueFrom: 
