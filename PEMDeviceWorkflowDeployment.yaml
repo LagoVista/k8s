@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pem-deviceworkflow-deployment
+  name: pem-device-workflow-deployment
   namespace: default
   labels: 
      app: nuviot
@@ -17,7 +17,7 @@ spec:
       labels:
         app: nuviot
         tier: pem-modules
-        module: pem-deviceworkflow
+        module: pem-device-workflow
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path:   /metrics
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: pem-listener
-        image: nuviot/pem-deviceworkflow:v1.6.592.1528
+        image: nuviot/pem-device-workflow:v1.6.592.1528
         env:
           - name: AccessKey
             valueFrom: 
