@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: logwriter
-        image: nuviot/pemstorage:v1.6.593.1640
+        image: nuviot/pemstorage:v1.6.593.1647
         env:
           - name: AccessKey
             valueFrom: 
