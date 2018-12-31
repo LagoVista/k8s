@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: devicedatastorage
-        image: nuviot/devicedatastorage:v1.6.593.1735
+        image: nuviot/devicedatastorage:v1.6.593.1852
         env:
           - name: AccessKey
             valueFrom: 
