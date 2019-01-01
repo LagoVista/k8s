@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: pem-transmitter
-        image: nuviot/pem-transmitter:v1.6.594.1701
+        image: nuviot/pem-transmitter:v1.6.594.1707
         env:
           - name: AccessKey
             valueFrom: 
