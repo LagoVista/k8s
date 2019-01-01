@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: pemstorage
-        image: nuviot/pemstorage:v1.6.594.1033
+        image: nuviot/pemstorage:v1.6.594.1048
         env:
           - name: AccessKey
             valueFrom: 
