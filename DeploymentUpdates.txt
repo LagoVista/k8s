@@ -1,8 +1,8 @@
-kubectl set image deployment.v1.apps/logwriter-deployment logwriter=nuviot/logwriter:v1.6.593.1722 --record
+kubectl set image deployment.v1.apps/logwriter-deployment logwriter=nuviot/logwriter:v1.6.594.1039 --record
 
-kubectl set image deployment.v1.apps/devicedatastorage-deployment devicedatastorage=nuviot/devicedatastorage:v1.6.593.1735 --record
+kubectl set image deployment.v1.apps/devicedatastorage-deployment devicedatastorage=nuviot/devicedatastorage:v1.6.593.1855 --record
 
-kubectl set image deployment.v1.apps/pemstorage-deployment pemstorage=nuviot/pemstorage:v1.6.593.1722 --record
+kubectl set image deployment.v1.apps/pemstorage-deployment pemstorage=nuviot/pemstorage:v1.6.594.1048 --record
 
 kubectl set image deployment.v1.apps/usagewriter-deployment usagewriter=nuviot/usagewriter:v1.6.593.1741 --record
 
@@ -12,18 +12,18 @@ kubectl set image deployment.v1.apps/devicerepo-deployment devicerepo=nuviot/dev
 
 kubectl set image deployment.v1.apps/notif-publisher-deployment notif-publisher=nuviot/notif-publisher:v1.6.593.1737 --record
 
-kubectl set image deployment.v1.apps/pem-listener-deployment pem-listener=nuviot/pem-listener:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-listener-deployment pem-listener=nuviot/pem-listener:v1.6.594.1707 --record
 
-kubectl set image deployment.v1.apps/pem-planner-deployment pem-planner=nuviot/pem-planner:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-planner-deployment pem-planner=nuviot/pem-planner:v1.6.594.1707 --record
 
-kubectl set image deployment.v1.apps/pem-sentinel-deployment pem-sentinel=nuviot/pem-sentinel:v1.6.593.1753 --record
+kubectl set image deployment.v1.apps/pem-sentinel-deployment pem-sentinel=nuviot/pem-sentinel:v1.6.594.1707 --record
 
-kubectl set image deployment.v1.apps/pem-input-translator-deployment pem-input-listener=nuviot/pem-input-translator:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-input-translator-deployment pem-input-listener=nuviot/pem-input-translator:v1.6.594.1707 --record
 
-kubectl set image deployment.v1.apps/pem-device-workflow-deployment pem-input-listener=nuviot/pem-device-workflow:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-device-workflow-deployment pem-input-listener=nuviot/pem-device-workflow:v1.6.593.1826 --record
 
-kubectl set image deployment.v1.apps/pem-output-translator-deployment pem-input-listener=nuviot/pem-output-translator:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-output-translator-deployment pem-input-listener=nuviot/pem-output-translator:v1.6.593.1815 --record
 
-kubectl set image deployment.v1.apps/pem-transmitter-deployment pem-input-listener=nuviot/pem-transmitter:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-transmitter-deployment pem-input-listener=nuviot/pem-transmitter:v1.6.594.1707 --record
 
-kubectl set image deployment.v1.apps/pem-data-stream-writer-deployment pem-input-listener=nuviot/pem-data-stream-writer:v1.6.593.1547 --record
+kubectl set image deployment.v1.apps/pem-data-stream-writer-deployment pem-input-listener=nuviot/pem-data-stream-writer:v1.6.594.1707 --record

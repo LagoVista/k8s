@@ -1,23 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devicedatastorage-deployment
+  name: instance-controller-deployment
   namespace: default
   labels: 
      app: nuviot
-     tier: serviceproviders
+     tier: front-end
 spec:
   replicas: 1     
   selector:
     matchLabels:
       app: nuviot
-      tier: serviceproviders
+      tier: front-end
   template:
     metadata:
       labels:
         app: nuviot
-        tier: serviceproviders
-        service: devicedatastorage
+        tier: front-end
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path:   /metrics
@@ -25,8 +24,8 @@ spec:
     
     spec:
       containers:
-      - name: devicedatastorage
-        image: nuviot/devicedatastorage:v1.6.593.1855
+      - name: instance-controller
+        image: nuviot/instance-controller:v1.6.594.1707
         env:
           - name: AccessKey
             valueFrom: 
