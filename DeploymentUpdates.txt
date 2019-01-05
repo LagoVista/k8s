@@ -6,7 +6,7 @@ kubectl set image deployment.v1.apps/pemstorage-deployment pemstorage=nuviot/pem
 
 kubectl set image deployment.v1.apps/usagewriter-deployment usagewriter=nuviot/usagewriter:v1.6.598.1507 --record
 
-kubectl set image deployment.v1.apps/settings-service-deployment settings-service=nuviot/settings-service:v1.6.598.1507 --record
+kubectl set image deployment.v1.apps/settings-service-deployment settings-service=nuviot/settings-service:v1.6.598.1551 --record
 
 kubectl set image deployment.v1.apps/devicerepo-deployment devicerepo=nuviot/devicerepo:v1.6.598.1534 --record
 
