@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: devicerepo
-        image: nuviot/devicerepo:v1.6.598.1531
+        image: nuviot/devicerepo:v1.6.598.1534
         env:
           - name: AccessKey
             valueFrom: 
