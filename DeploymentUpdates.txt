@@ -26,4 +26,4 @@ kubectl set image deployment.v1.apps/pem-output-translator-deployment pem-input-
 
 kubectl set image deployment.v1.apps/pem-transmitter-deployment pem-input-listener=nuviot/pem-transmitter:v1.6.599.1147 --record
 
-kubectl set image deployment.v1.apps/pem-data-stream-writer-deployment pem-input-listener=nuviot/pem-data-stream-writer:v1.6.599.1603 --record
+kubectl set image deployment.v1.apps/pem-data-stream-writer-deployment pem-input-listener=nuviot/pem-data-stream-writer:v1.6.599.1623 --record
