@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: usagewriter
-        image: nuviot/usagewriter:v1.6.598.1848
+        image: nuviot/usagewriter:v1.6.599.0626
         env:
           - name: AccessKey
             valueFrom: 
