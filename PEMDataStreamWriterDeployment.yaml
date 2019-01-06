@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: pem-data-stream-writer
-        image: nuviot/pem-data-stream-writer:v1.6.599.1147
+        image: nuviot/pem-data-stream-writer:v1.6.599.1600
         env:
           - name: AccessKey
             valueFrom: 
