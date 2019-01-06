@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: pem-output-translator
-        image: nuviot/pem-output-translator:v1.6.598.1721
+        image: nuviot/pem-output-translator:v1.6.599.1147
         env:
           - name: AccessKey
             valueFrom: 
